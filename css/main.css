@@ -5,40 +5,40 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local('Roboto-Regular'),
-		url('../assets/fonts/Roboto-Regular.woff2') format('woff2'), 
-		url('./assets/fonts/Roboto-Regular.woff') format('woff'),
-		url('./assets/fonts/Roboto-Regular.ttf') format('ttf'),
-		url('./assets/fonts/Roboto-Regular.eot') format('eot');
+		url('/assets/fonts/Roboto-Regular.woff2') format('woff2'), 
+		url('/assets/fonts/Roboto-Regular.woff') format('woff'),
+		url('/assets/fonts/Roboto-Regular.ttf') format('ttf'),
+		url('/assets/fonts/Roboto-Regular.eot') format('eot');
 }
 @font-face {
 	font-family: 'Roboto-Medium';
 	font-style: normal;
 	font-weight: 500;
 	src: local('Roboto-Medium'),
-		url('./assets/fonts/Roboto-Medium.woff2') format('woff2'), 
-		url('./assets/fonts/Roboto-Medium.woff') format('woff'),
-		url('./assets/fonts/Roboto-Medium.ttf') format('ttf'),
-		url('./assets/fonts/Roboto-Medium.eot') format('eot');
+		url('/assets/fonts/Roboto-Medium.woff2') format('woff2'), 
+		url('/assets/fonts/Roboto-Medium.woff') format('woff'),
+		url('/assets/fonts/Roboto-Medium.ttf') format('ttf'),
+		url('/assets/fonts/Roboto-Medium.eot') format('eot');
 }
 @font-face {
 	font-family: 'Roboto-Light';
 	font-style: normal;
 	font-weight: 300;
 	src: local('Roboto-Light'),
-		url('./assets/fonts/Roboto-Light.woff2') format('woff2'), 
-		url('./assets/fonts/Roboto-Light.woff') format('woff'),
-		url('./assets/fonts/Roboto-Light.ttf') format('ttf'),
-		url('./assets/fonts/Roboto-Light.eot') format('eot');
+		url('/assets/fonts/Roboto-Light.woff2') format('woff2'), 
+		url('/assets/fonts/Roboto-Light.woff') format('woff'),
+		url('/assets/fonts/Roboto-Light.ttf') format('ttf'),
+		url('/assets/fonts/Roboto-Light.eot') format('eot');
 }
 @font-face {
 	font-family: 'Lato-Regular';
 	font-style: normal;
 	font-weight: 300;
 	src: local('Lato-Regular'),
-		url('./assets/fonts/Lato-Regular.woff2') format('woff2'), 
-		url('./assets/fonts/Lato-Regular.woff') format('woff'),
-		url('./assets/fonts/Lato-Regular.ttf') format('ttf'),
-		url('./assets/fonts/Lato-Regular.eot') format('eot');
+		url('/assets/fonts/Lato-Regular.woff2') format('woff2'), 
+		url('/assets/fonts/Lato-Regular.woff') format('woff'),
+		url('/assets/fonts/Lato-Regular.ttf') format('ttf'),
+		url('/assets/fonts/Lato-Regular.eot') format('eot');
 }
 body {
     font-family: 'Roboto-Regular', sans-serif;
@@ -74,65 +74,35 @@ a {
 
 /* header */
 .header {
+
     background: linear-gradient(90deg, #00417B 0%, #237CB1 50.26%, #2580B2 52.72%, #46D2CC 100%);
     box-shadow: 0px 0.125rem 0.625rem rgba(0, 0, 0, 0.159392);
 }
 
 .header-search{
- 
+    
     background-color: #fff;
     height: 3.75rem;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    padding-left: 100vw;
+    right: calc(50vw + 638px);
     box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.20287);
 } 
-@media (max-width: 3840px) {
-.header-search{
-    max-width: 37vw;
+
+.search-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #2B2B2B;
+    background-color: #fff;
+    height: 3.75rem;
+    width: 13.1rem;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.20287);
+    clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0 100%, 0 0);
+    z-index: 10;
 }
-}
-@media (max-width: 3600px) {
-.header-search{
-    max-width: 34vw;
-}
-}
-@media (max-width: 3000px) {
-.header-search{
-    max-width: 29vw;
-}
-}
-@media (max-width: 2725px) {
-.header-search{
-    max-width: 27vw;
-}
-}
-@media (max-width: 2560px) {
-.header-search{
-    max-width: 25vw;
-}
-}
-@media (max-width: 2200px) {
-.header-search{
-    max-width: 21vw;
-}
-}
-@media (max-width: 1900px) {
-.header-search{
-    max-width: 17vw;
-}
-}
-@media (max-width: 1660px) {
-.header-search{
-    max-width: 12vw;
-}
-}
-@media (max-width: 1440px) {
-.header-search{
-    max-width: 7vw;
-}
-}
+
 
 .logo-icon{
     width: 1.5rem;
@@ -156,21 +126,8 @@ a {
     display: flex;
     color: #fff;
     font-size: 0.875rem;
-
-
 }
-.search-title{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #2B2B2B;
-    background-color: #fff;
-    height: 3.75rem;
-    width: 13.1rem;
-    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.20287);
-    clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0 100%, 0 0);
-    z-index: 10;
-}
+
 .search-icon{
     width: 1.125rem;
     height: 1.125rem;
@@ -327,7 +284,7 @@ a {
 }
 
 .order{
-    width: 70.25%;
+    width: 900px;
     box-shadow: 0 0 1.1875rem rgba(49, 68, 93, 0.2311);
 }
 
@@ -364,7 +321,7 @@ a {
 }
 @media (max-width: 1023px) {
 .order__header-account {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 }
 /* sum-order */
@@ -376,6 +333,7 @@ a {
 }
 .sum__money {
     font-family: 'Roboto-Light';
+    font-weight: 300;
     color: #CF4545;
     font-size: 2.875rem;
     padding-top: 1.625rem;
@@ -390,6 +348,7 @@ a {
 }
 .sum__account-item {
     font-family: 'Roboto-Light';
+    font-weight: 300;
     color: #828A96;
 }
 .sum__status {
@@ -407,6 +366,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    max-width: 100%;
 }
 
 .company-container {
@@ -414,11 +374,7 @@ a {
     margin: 1rem auto;
     filter: drop-shadow(0 5px 0.44rem rgba(0, 0, 0, 0.0869282));
 }
-@media (max-width: 1023px) {
-.company-container {
-    width: 75%;
-}
-}
+
 .company-card {
     width:100%;
     border-radius:3px;
@@ -475,7 +431,8 @@ a {
 
 
 .company-inform__text{
-    font-family: "Roboto-light";
+    font-family: "Roboto-Light";
+    font-weight: 300;
     text-transform: uppercase;
 }
 
@@ -558,6 +515,7 @@ circle:nth-child(2n) {
 }
 
 .circle-diagram__percentage{
+    font-family: "Lato-Regular";
     font-size: 1rem;
 }
 .circle-diagram__reliability{
@@ -589,11 +547,7 @@ circle:nth-child(2n) {
     font-size: 0.75rem;
     color: #808080
 }
-@media (max-width: 1023px) {
-.commission {
-        width: 75%;
-}
-}
+
 /* toolbar */
 
 
@@ -608,11 +562,7 @@ circle:nth-child(2n) {
     width: 60.6%;
     margin: 0 auto;
 }
-@media (max-width: 1023px) {
-.order__footer {
-    width: 75%;
-}
-}
+
 
 .toolabar__button-favorites{
     display: flex;
@@ -650,4 +600,3 @@ circle:nth-child(2n) {
     height: 20px;
     fill:black;
 }
-
