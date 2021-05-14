@@ -331,6 +331,7 @@ a {
 }
 .order__header-account {
     font-size: 1.5rem;
+    font-weight: 300;
 }
 @media (max-width: 1023px) {
 .order__header-account {
