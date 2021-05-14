@@ -375,7 +375,7 @@ a {
     flex-direction: column;
 }
 .sum__money {
-    font-family: 'Roboto-light';
+    font-family: 'Roboto-Light';
     color: #CF4545;
     font-size: 2.875rem;
     padding-top: 1.625rem;
@@ -389,7 +389,7 @@ a {
    
 }
 .sum__account-item {
-    font-family: 'Roboto-light';
+    font-family: 'Roboto-Light';
     color: #828A96;
 }
 .sum__status {
@@ -650,21 +650,4 @@ circle:nth-child(2n) {
     height: 20px;
     fill:black;
 }
-/* cicle-diagram */
 
-/* .circle-diagram{
-    background: #fff;
-    width: 43px;
-    height: 43px;
-    text-align: center;
-    font: 0.75rem/1rem 'Roboto-regular';
-    border: 1px solid #88c580; */
-    /* border-right: 10px solid #D0E6BB; */
-    /* border-radius: 66px;
-    padding: 0.7rem 0.7rem 0.7rem 0.6rem;
-}
-.circle-diagram__finance{
-    border-left: 1px solid #e6e6e6;
-    padding: 0.8rem 0.9rem 0.8rem 0.9rem;
-    font: 0.75rem/1rem 'Roboto-regular';
-} */
