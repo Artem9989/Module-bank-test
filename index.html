@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module__bank</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="icon" href="assets/icons/Logo.svg" type="image/x-icon">
+</head>
+
+<body>
+    <svg style="display: none;">
+        <symbol id="icon-arrow" viewBox="0 0 8 5" xmlns="http://www.w3.org/2000/svg">
+            <g>
+                <path
+                    d="M0.252786 0.261359C-0.084262 0.609742 -0.084262 1.17458 0.252786 1.52296L3.36391 4.73871C3.70096 5.08709 4.24742 5.0871 4.58447 4.73871C4.92152 4.39033 4.92152 3.82549 4.58447 3.47711L1.47335 0.26136C1.1363 -0.0870226 0.589834 -0.0870232 0.252786 0.261359Z">
+                </path>
+                <path
+                    d="M3.41553 4.73864C3.07848 4.39026 3.07848 3.82542 3.41553 3.47703L6.52665 0.261288C6.8637 -0.0870951 7.41017 -0.0870956 7.74721 0.261287C8.08426 0.60967 8.08426 1.17451 7.74721 1.52289L4.63609 4.73864C4.29904 5.08702 3.75258 5.08702 3.41553 4.73864Z">
+                </path>
+            </g>
+        </symbol>
+        <symbol id="profile-icon" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.5 0L8.32292 0.0442133L0.53125 2.16645L0 2.3212V2.85176V16.2926V17H0.708333H7.08333H7.79167V16.2926V14.1704H9.20833V16.2926V17H9.91667H16.2917H17V16.2926V2.85176V2.3212L16.4688 2.16645L8.67708 0.0442133L8.5 0ZM8.50002 1.45904L15.5834 3.38231V15.5852H10.625V13.4629V12.7555H9.91669H7.08335H6.37502V13.4629V15.5852H1.41669V3.38231L8.50002 1.45904ZM3.54169 4.26658V5.6814H4.95835V4.26658H3.54169ZM6.375 4.26658V5.6814H7.79167V4.26658H6.375ZM9.20831 4.26658V5.6814H10.625V4.26658H9.20831ZM12.0417 4.26658V5.6814H13.4584V4.26658H12.0417ZM3.54169 7.09623V8.51105H4.95835V7.09623H3.54169ZM6.375 7.09623V8.51105H7.79167V7.09623H6.375ZM9.20831 7.09623V8.51105H10.625V7.09623H9.20831ZM12.0417 7.09623V8.51105H13.4584V7.09623H12.0417ZM3.54169 9.92588V11.3407H4.95835V9.92588H3.54169ZM6.375 9.92588V11.3407H7.79167V9.92588H6.375ZM9.20831 9.92588V11.3407H10.625V9.92588H9.20831ZM12.0417 9.92588V11.3407H13.4584V9.92588H12.0417ZM3.54169 12.7555V14.1703H4.95835V12.7555H3.54169ZM12.0417 12.7555V14.1703H13.4584V12.7555H12.0417Z" />
+        </symbol>
+        <symbol id="new-payment-icon" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42ZM20 12C20 11.4477 20.4477 11 21 11C21.5523 11 22 11.4477 22 12V20H30C30.5523 20 31 20.4477 31 21C31 21.5523 30.5523 22 30 22H22V30C22 30.5523 21.5523 31 21 31C20.4477 31 20 30.5523 20 30V22H12C11.4477 22 11 21.5523 11 21C11 20.4477 11.4477 20 12 20H20V12Z" />
+        </symbol>
+        <symbol id="notifications-icon" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.5 6C6.67157 6 6 6.65435 6 7.46154C6 7.52386 6.01567 7.58396 6.02344 7.64423C3.43046 8.28997 1.5 10.5847 1.5 13.3077V19.8846C1.5 20.2975 1.17377 20.6154 0.75 20.6154H0V22.0769H5.39062C5.30493 22.3077 5.25 22.5497 5.25 22.8077C5.25 24.0098 6.26624 25 7.5 25C8.73376 25 9.75 24.0098 9.75 22.8077C9.75 22.5497 9.69507 22.3077 9.60938 22.0769H15V20.6154H14.25C13.8262 20.6154 13.5 20.2975 13.5 19.8846V13.5132C13.5 10.7666 11.6176 8.31911 8.97656 7.64423C8.98433 7.58396 9 7.52386 9 7.46154C9 6.65435 8.32843 6 7.5 6ZM7.17188 8.92307C7.28099 8.91536 7.3888 8.92315 7.5 8.92307C7.54766 8.92304 7.59262 8.92167 7.64062 8.92307C10.0907 8.99472 12 11.0875 12 13.5132V19.8846C12 20.1426 12.0549 20.3846 12.1406 20.6154H2.85938C2.94507 20.3846 3 20.1426 3 19.8846V13.3077C3 10.9868 4.83364 9.08839 7.17188 8.92307ZM7.5 22.0769C7.9231 22.0769 8.25 22.3954 8.25 22.8077C8.25 23.2199 7.9231 23.5385 7.5 23.5385C7.0769 23.5385 6.75 23.2199 6.75 22.8077C6.75 22.3954 7.0769 22.0769 7.5 22.0769Z"
+                fill="white" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.5 16C20.6421 16 24 12.6421 24 8.5C24 4.35786 20.6421 1 16.5 1C12.3579 1 9 4.35786 9 8.5C9 12.6421 12.3579 16 16.5 16Z"
+                fill="#E54D4D" stroke="#37AEC1" stroke-width="2" />
+            <path
+                d="M16.2958 5.15C16.7492 5.15 17.1392 5.23333 17.4658 5.4C17.7992 5.56667 18.0525 5.79333 18.2258 6.08C18.3992 6.36667 18.4858 6.68667 18.4858 7.04C18.4858 7.42 18.4025 7.78667 18.2358 8.14C18.0758 8.48667 17.8058 8.87333 17.4258 9.3C17.0458 9.72667 16.4892 10.29 15.7558 10.99H18.6358L18.4958 12H14.3058V11.06C15.1592 10.1933 15.7692 9.55333 16.1358 9.14C16.5092 8.72 16.7725 8.36333 16.9258 8.07C17.0858 7.77 17.1658 7.46 17.1658 7.14C17.1658 6.83333 17.0758 6.59333 16.8958 6.42C16.7225 6.24667 16.4892 6.16 16.1958 6.16C15.9358 6.16 15.7058 6.21667 15.5058 6.33C15.3125 6.43667 15.1092 6.61667 14.8958 6.87L14.1158 6.25C14.6825 5.51667 15.4092 5.15 16.2958 5.15Z"
+                fill="white" />
+        </symbol>
+        <symbol id="search-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <path id="Shape" fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.0024 0C14.2884 0 8.00486 6.28351 8.00486 13.9976C8.00486 17.35 9.17919 20.4198 11.1543 22.8335L0 33.9879L2.01215 36L13.1665 24.8457C15.5802 26.8208 18.65 27.9951 22.0024 27.9951C29.7165 27.9951 36 21.7116 36 13.9976C36 6.28351 29.7165 0 22.0024 0ZM22.0024 2.79951C28.2035 2.79951 33.2005 7.79648 33.2005 13.9976C33.2005 20.1987 28.2035 25.1956 22.0024 25.1956C15.8013 25.1956 10.8044 20.1987 10.8044 13.9976C10.8044 7.79648 15.8013 2.79951 22.0024 2.79951Z" />
+        </symbol>
+        <symbol id="logo-icon" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.000494764 4.7997L0 0H4.7997L4.80069 4.7997H0.000494764ZM9.60114 0H14.4003H19.2001V4.7997H14.4003H9.60114V0ZM19.2001 9.59941V9.59966L14.4003 9.59966H9.60114V14.3989H14.4003V14.4013H19.2001V19.1996V23.9998H23.9993V19.1996V14.3989H19.2001V9.59966H23.9995L24 4.79971H19.2001H14.4003V9.59941H19.2001ZM9.60114 24V19.2L14.4003 19.1996V24H9.60114ZM9.60089 4.79971H4.80069V9.59941H9.60089V4.79971ZM4.7997 14.3989L4.80069 9.59966H9.60114V14.3989H4.7997ZM9.60089 19.2001V14.3989H4.7997H0V19.2001V23.9998H4.7997L4.7997 19.2001H9.60089ZM0.000494764 4.79971L0 9.59966L4.80069 9.59966L4.80069 4.79971H0.000494764Z" />
+        </symbol>
+        <symbol id="act-icon" viewBox="0 0 22 4" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1.83333 0C0.820811 0 0 0.895431 0 2C0 3.10457 0.820811 4 1.83333 4C2.84586 4 3.66667 3.10457 3.66667 2C3.66667 0.895431 2.84586 0 1.83333 0ZM11 0C9.9875 0 9.16669 0.895431 9.16669 2C9.16669 3.10457 9.9875 4 11 4C12.0125 4 12.8334 3.10457 12.8334 2C12.8334 0.895431 12.0125 0 11 0ZM20.1666 0C19.1541 0 18.3333 0.895431 18.3333 2C18.3333 3.10457 19.1541 4 20.1666 4C21.1792 4 22 3.10457 22 2C22 0.895431 21.1792 0 20.1666 0Z" />
+        </symbol>
+        <symbol id="ask-icon" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0 0V0.866035V14.7226V15.5886H0.846154H4.23077V18.1867V20L5.60577 18.8633L9.59856 15.5886H21.1538H22V14.7226V0.866035V0H21.1538H0.846154H0ZM1.69232 1.73206H20.3077V13.8565H9.30771H9.01684L8.77886 14.046L5.92309 16.3735V14.7226V13.8565H5.07694H1.69232V1.73206ZM13.0625 3.84302L11.8462 5.08794L13.6442 6.92827H5.9231V8.66034H13.6442L11.7933 10.5548L13.0096 11.7997L16.2885 8.41677L16.8967 7.7943L16.2885 7.17184L13.0625 3.84302Z" />
+        </symbol>
+        <symbol id="favorites-icon" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.5 0L9.8366 1.51203L7.45752 6.84994L1.64706 7.4685L0 7.65178L1.23529 8.75143L5.55882 12.669L4.34641 18.3963L4.00327 20L5.44444 19.1753L10.5 16.2428L15.5556 19.1753L16.9967 20L16.6536 18.3963L15.4412 12.669L19.7647 8.75143L21 7.65178L19.3529 7.4685L13.5425 6.84994L11.1634 1.51203L10.5 0ZM10.5 3.5968L12.3758 7.83506L12.5588 8.22452L12.9706 8.27034L17.5687 8.75144L14.1373 11.8442L13.817 12.142L13.9085 12.5544L14.8693 17.0676L10.866 14.7766L10.5 14.5475L10.134 14.7766L6.13074 17.0676L7.09153 12.5544L7.18303 12.142L6.86277 11.8442L3.4314 8.75144L8.02944 8.27034L8.4412 8.22452L8.62421 7.83506L10.5 3.5968Z" />
+        </symbol>
+        <symbol id="repeat-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10 0V1.66667C14.6121 1.66667 18.3333 5.38789 18.3333 10C18.3333 14.6121 14.6121 18.3333 10 18.3333C5.38789 18.3333 1.66667 14.6121 1.66667 10C1.66667 7.27786 2.98751 4.87769 5 3.35938V7.5H6.66667V1.66667V0.833333H5.83333H0V2.5H3.41146C1.32783 4.33226 0 7.01412 0 10C0 15.5129 4.48711 20 10 20C15.5129 20 20 15.5129 20 10C20 4.48711 15.5129 0 10 0Z" />
+        </symbol>
+
+        <symbol id="circle-diagram__finance-use" class="circle-diagram__finance-use">
+            <circle transform="rotate(-90)" r="21" cx="-23" cy="23" />
+            <circle transform="rotate(-90)" r="21" cx="-23" cy="23" />
+            <text x="14" y="28.35" class="circle-diagram__percentage">88</text>
+        </symbol>
+        <symbol id="circle-diagram__reliability-use" class="circle-diagram__reliability-use">
+            <circle transform="rotate(-90)" r="21" cx="-23" cy="23" />
+            <circle transform="rotate(-90)" r="21" cx="-23" cy="23" />
+            <text x="9" y="28.35" class="circle-diagram__percentage">100</text>
+        </symbol>
+        <symbol id="close-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.071 7.92891C21.6805 7.53839 21.0474 7.53839 20.6569 7.92891L15 13.5858L9.34314 7.92891C8.95264 7.53839 8.31946 7.53839 7.92896 7.92891C7.53842 8.31943 7.53842 8.95259 7.92896 9.34312L13.5858 15L7.92892 20.6568C7.53839 21.0473 7.53839 21.6805 7.92892 22.071C8.31946 22.4616 8.95261 22.4616 9.34314 22.071L15 16.4142L20.6569 22.071C21.0474 22.4616 21.6805 22.4616 22.0711 22.071C22.4616 21.6805 22.4616 21.0473 22.0711 20.6568L16.4142 15L22.071 9.34312C22.4616 8.95259 22.4616 8.31943 22.071 7.92891Z"
+                fill="#2B2B2B" />
+        </symbol>
+
+
+
+    </svg>
+    <header class="header">
+        <div class="header-search">
+        </div>
+        <div class="container">
+
+            <div class="main-menu">
+                <div class="search-title">
+                    <div class="logo">
+                        <svg class="logo-icon">
+                            <use xlink:href="#logo-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="search">
+                        <svg class="search-icon">
+                            <use xlink:href="#search-icon"></use>
+                        </svg>
+                        <span class="search__text">
+                            поиск
+                        </span>
+
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-list__link nav-list__link--active">деньги</li>
+                        <li class="nav-list__link"> контакты </li>
+                        <li class="nav-list__link">услуги
+                            <svg class="nav-list__link-icon-arrow">
+                                <use xlink:href="#icon-arrow"></use>
+                            </svg>
+                        </li>
+                        <div class="nav__new-payment">
+                            <svg class="nav-list__new-payment-icon">
+                                <use xlink:href="#new-payment-icon"></use>
+                            </svg>
+                        </div>
+                    </ul>
+
+
+
+                    <div class="inform">
+                        <div class="inform__icon">
+                            <!-- иконка уведомлений -->
+                            <svg class="inform__notifications-icon">
+                                <use xlink:href="#notifications-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="inform__profile">
+                            <svg class="inform__profile-icon">
+                                <use xlink:href="#profile-icon"></use>
+                            </svg>
+                            <div class="inform__profile-text">
+                                ООО «родные просторы»
+                                <svg class="nav-list__link-icon-arrow">
+                                    <use xlink:href="#icon-arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section section--order">
+        <div class="container container__drawer">
+            <div class="order">
+                <div class="order__header">
+
+                    <div class="order__header-close">
+                        <svg class="order__header-close-icon">
+                            <use xlink:href="#close-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="order__header-account">
+                        Платежное поручение &#8470;&nbsp;5241234 от&nbsp;23.09.2015
+                    </div>
+                </div>
+                <div class="order__inner">
+                    <div class="sum">
+                        <div class="sum__money">
+                            – 23 500,00 ₽
+                        </div>
+                        <div class="sum__account">
+                            <span class="sum__account-item"> со&nbsp;счета: </span>Расчетный счет (***012345)
+                        </div>
+                        <div class="sum__status">
+                            ИСПОЛНЕН, 21 июня 15:33
+                        </div>
+                    </div>
+
+                    <div class="company-container">
+                        <div class="company-card">
+                            <div class="company-card__inner">
+
+                                <div class="company-card__inner-rounded">
+                                    <div class="company-card__col company-card__col--inform">
+                                        <div class="company-name">
+                                            ООО &laquo;Родные просторы&raquo;
+                                        </div>
+                                        <ul class="company-inform">
+
+                                            <li class="company-inform__text">ИНН: 22341497819132</li>
+                                            <li class="company-inform__text">Банк: ОАО Сбербанк</li>
+                                            <li class="company-inform__text">Банк: ОАО Сбербанк</li>
+                                            <li class="company-inform__text">Счет: 40802810970010000395</li>
+                                        </ul>
+                                    </div>
+                                    <div class="company-card__col">
+                                        <ul class="company-stat">
+                                            <li class="stat-item">
+                                                <span class="state-item__text">Высокая финансовая устойчивость</span>
+                                                <div class="circle-diagram ">
+
+                                                    <svg class="circle-diagram__finance">
+                                                        <use xlink:href="#circle-diagram__finance-use"></use>
+                                                    </svg>
+                                                </div>
+                                            </li>
+                                            <li class="stat-item">
+                                                <span class="state-item__text">высокая благонадёжность</span>
+                                                <div class="circle-diagram ">
+                                                    <svg class="circle-diagram__reliability">
+                                                        <use xlink:href="#circle-diagram__reliability-use"></use>
+                                                    </svg>
+                                                </div>
+
+                                            </li>
+                                            <li class="stat-item">
+                                                <span class="state-item__text">Кредитоспособность 44,5 млрд ₽</span>
+                                                <div class="class">
+                                                    <div class="class-text">
+                                                        <span class="class-diagram__number">1</span> класс
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="company-card__footer">
+                                <div class="company-card__footer-text">
+                                    Оплата за&nbsp;партию ромашек и&nbsp;одуванчиков по&nbsp;договору 14023-023
+                                    от&nbsp;14.05.2015&nbsp;г. Сумма 11430-00. В&nbsp;том числе НДС 18%&nbsp;&mdash;
+                                    1450,00&nbsp;₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commission">
+                        <div class="commission__text">
+                            Комиссия банка: 70&nbsp;р. <br>
+                            Размер комиссии рассчитан автоматически согласно тарифу вашей компании и&nbsp;является
+                            ознакомительным. Точный размер комиссии определяется после передачи платежного документа
+                            на&nbsp;обработку в&nbsp;банк.
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="order__footer">
+                    <div class="toolbar">
+                        <div class="toolbar__button">
+                            <a class="toolbar__button-repeat" href="#">
+
+                                <svg class="toolbar__button-repeat-icon">
+                                    <use xlink:href="#repeat-icon"></use>
+                                </svg>
+                                <span class="toolbar__button-text">Повторить</span>
+                            </a>
+                        </div>
+                        <div class="toolbar__button">
+
+                            <a class="toolbar__button-favorites" href="#">
+                                <svg class="toolbar__button-favorites-icon">
+                                    <use xlink:href="#favorites-icon"></use>
+                                </svg>
+                                <span class="toolbar__button-text">В избранное</span>
+                            </a>
+
+                        </div>
+                        <div class="toolbar__button">
+
+                            <a class="toolbar__button-ask" href="#">
+                                <svg class="toolbar__button-ask-icon">
+                                    <use xlink:href="#ask-icon"></use>
+                                </svg>
+                                <span class="toolbar__button-text">Спросить</span>
+                            </a>
+
+                        </div>
+                        <div class="toolbar__button">
+
+                            <a class="toolbar__button-act" href="#">
+                                <svg class="toolbar__button-act-icon">
+                                    <use xlink:href="#act-icon"></use>
+                                </svg>
+                                <span class="toolbar__button-text">Действия</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
